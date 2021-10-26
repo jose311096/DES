@@ -1,0 +1,49 @@
+<!--
+  Generated template for the ModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Nuevo Reporte</ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="cerrarModal()">
+        <ion-icon name="md-close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  
+  <ion-card>
+    <ion-card-header>
+      <strong>Direccion Reporte:</strong>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{address}}</p>
+        <hr/>
+        <form (ngSubmit)="guardarSitio()">
+          <ion-item>
+            <ion-label>Motivo:</ion-label>
+            <ion-select [(ngModel)]="description" name="description">
+              <ion-option value="Hurto a personas">Hurto a personas</ion-option>
+              <ion-option value="Hurto a locales/viviendas">Hurto a locales/viviendas</ion-option>
+              <ion-option value="Presencia de pandillas">Presencia de pandillas</ion-option>
+              <ion-option value="Microtrafico de estupefacientes">Microtrafico de estupefacientes</ion-option>
+              <ion-option value="Homicidio/Intento de homicidio">Homicidio/Intento de homicidio</ion-option>
+              <ion-option value="Riñas/Altercado">Riñas/Altercado</ion-option>
+            </ion-select>
+          </ion-item>
+          <hr/>
+          <button ion-button type="submit" block>Crear reporte</button>
+        </form>
+        
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

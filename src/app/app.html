@@ -1,0 +1,35 @@
+<ion-menu [content]="mainContent">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Menu
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content id="side-menu21">
+    <ion-list id="menu-list1">
+      <ion-item color="positive" menuClose="" on-click="goToUbicacion()" id="menu-list-item1">
+        Mapa
+        <ion-icon name="map" item-right></ion-icon>
+      </ion-item>
+      <ion-item color="positive" menuClose="" on-click="goToSolicitarAutoridad()" id="menu-list-item6">
+        Solicitar autoridad
+        <ion-icon name="alert" item-right></ion-icon>
+      </ion-item>
+      <ion-item color="positive" menuClose="" on-click="goToListado()" id="menu-list-item17">
+          Listado de reportes
+          <ion-icon name="md-list-box" item-right></ion-icon>
+        </ion-item>
+      <ion-item color="positive" menuClose="" on-click="goToIndicaciones()" id="menu-list-item16">
+        Consejos de seguridad
+        <ion-icon name="md-book" item-right></ion-icon>
+      </ion-item>
+      <ion-item color="positive" menuClose="" on-click="goToOpcionesYMas()" id="menu-list-item11">
+        Contactenos
+        <ion-icon name="md-contact" item-right></ion-icon>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #mainContent [root]="rootPage"></ion-nav>

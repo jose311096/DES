@@ -1,0 +1,34 @@
+<!--
+  Generated template for the ListadoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon> 
+        </button>
+    <ion-title>Listado de reportes</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content > 
+
+  <ion-list>
+    <ion-item *ngFor="let sitio of lista">
+      <ion-card>
+        <ion-card-header>
+            <strong>{{sitio.description}}</strong>
+        </ion-card-header>
+        <ion-card-content>
+          <p>{{sitio.address}}</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
